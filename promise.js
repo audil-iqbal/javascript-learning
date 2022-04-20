@@ -14,4 +14,29 @@ p.then(data => {
     console.log(err);
 });
 
-let arr = ['audil',4,'iqbal'];
+//implement caching function
+
+function cache(fn,context){
+    let res = {};
+    return function (...params) {
+        let args = JSON.stringify(params);
+        if(!res[args])
+         res[args] = fn.call(context || this,...params);
+        return res[args];
+    }
+}
+
+function product(n1,n2) {
+    for(let i=0;i<9999999;i++){}
+    return n1*n2;
+}
+
+let cachedproduct = cache(product);
+
+console.time('start');
+console.log(cachedproduct(6,8));
+console.timeEnd('start');
+
+console.time('second');
+cachedproduct(6,8);
+console.timeEnd('second');

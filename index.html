@@ -14,27 +14,50 @@
                 padding: 30px;
                 border: 1px solid rebeccapurple;
             }
+            li{
+                background-color: brown;
+            }
         </style>
     </head>
     <body>
         <h1>audil iqbal</h1>
 
         <!-- Code for Event bubble and Capture -->
+        <p>Event bubble and capture</p>
         <div id="gp">
             <div id="p">
                 <div id="c"></div>
             </div>
         </div>
-        
+        <hr/>
+
         <!-- Code for Debouncing and Throttling -->
         <p>Debouncing using key input</p>
         <input type="text" name="" id="" onkeyup="betterfunction()">
         <p>Throttling using window resize</p>
-        
-        <!-- <script src="debounceandThrottle.js" async defer></script> -->
-        <!-- <script src="polyfillBind.js" async defer></script> -->
-        <!-- <script src="eventBubbleandCapturing.js" async defer></script> -->
+        <hr/>
+
+        <!-- Event delegation -->
+        <p>Event delegation</p>
+        <div style="background-color: aqua;">
+            <ul id="category" style="background-color: bisque;">
+                <li id="laptop">laptops</li>
+                <li id="camera">cameras</li>
+                <li id="shoe">shoes</li>
+            </ul>
+            <form action="" id="formid">
+                <input type="text" name="fname" id="fname" data-uppercase>
+                <input type="text" name="email" id="email" data-uppercase>
+                <input type="text" name="addr" id="addr">
+            </form>
+        </div>
+        <hr/>
+        <!-- <script src="debounceandThrottle.js"></script> -->
+        <!-- <script src="eventBubbleandCapturing.js"></script> -->
+        <!-- <script src="eventDelegation.js"></script> -->
+        <!-- <script src="polyfillBind.js"></script> -->
+        <!-- <script src="polyFillArray.js"></script> -->
         <!-- <script src="promise.js"></script> -->
-        <script src="polyFillArray.js"></script>
+        <script src="currying.js"></script>
     </body>
 </html>
