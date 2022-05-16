@@ -15,4 +15,10 @@ document.querySelector('#c').addEventListener('click',function(){
     console.log('child');
 },true);
 
+//dispatch custom event and bubble to dccument
+document.addEventListener('hello',event => {
+    console.log('hello from ' + event.target.tagName + ", istrust: "+ event.isTrusted);
+});
 
+let cevent = new Event('hello',{bubbles:true});
+document.getElementById('events').dispatchEvent(cevent);

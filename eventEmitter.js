@@ -13,3 +13,13 @@ emitter.on('messaged',function(params) {
 
 //raise an event
 emitter.emit('messaged','audil iqbal');
+
+
+//child process through spawn
+const {spawn} = require('child_process');
+
+const child=spawn('echo',["$M2_HOME"],{shell:true});
+child.stdout.on('data',(data)=>{
+    console.log(`stdout: ${data}`);
+});
+
