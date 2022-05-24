@@ -59,3 +59,9 @@ fetch('https://jsonplaceholder.typicode.com/users')
         dotsContainer.innerText = userArray.map(user => user.name).join("\n")
         console.log(userArray);
     })
+
+
+setInterval(function(){
+    var dt = new Date();
+    document.getElementById('showtimer').innerHTML = dt.toLocaleDateString() + "-" + dt.toLocaleTimeString() ;
+},1000);
