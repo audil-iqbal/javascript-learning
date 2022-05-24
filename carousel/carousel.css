@@ -1,0 +1,28 @@
+#slide-container{
+    position: relative;
+    height: 400px;
+    width: 800px;
+    border: 2px solid gray;
+    border-radius: 5px;
+}
+
+#previous{
+    position: absolute;
+    top: 50%;
+
+}
+#next{
+    position: absolute;
+    top: 50%;
+    right: 0%;
+
+}
+.slides{
+    position: absolute;
+    width: 90%;
+    height: 95%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: gray;
+}
